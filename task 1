@@ -1,0 +1,24 @@
+#include <iostream>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+     int generated,entered=0;
+   cout<<"\t\t\t--------  NUMBER GUESSING GAME  --------   \n\n";
+    srand(time(NULL));
+    generated=(rand()%100)+1;
+    cout<<"Guess a number between 1 and 100 : \n";
+    while(generated!=entered)
+    {
+        cin>>entered;
+        if(entered>generated)
+            cout<<"The guess is too high try again : \n";
+        else if(entered<generated)
+            cout<<"The guess is too low try again : \n";
+        else
+            cout<<"You guessed the number correctly ! \n";
+    }
+    return 0;
+}
